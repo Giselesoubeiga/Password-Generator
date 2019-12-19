@@ -18,6 +18,37 @@
 
         <h2>Generate a Password</h2>
         <hr>
+        <div class="input-controls">
+          <label for="" class="babel">Select a Passeword Length between 8 and 128.</label>
+            <input type="number" class="input-lenght" name="passewordLength" id="passewordLength" min="8" max="128">
+           
+            <div class="form-checkbox">
+              <label for="nbLowerCaseChar" class="babel">
+                <input type="checkbox" name="nbLowerCaseChar" id="nbLowerCaseChar" id="nbLowerCaseChar">
+                    Lower-Case Characters
+              </label>
+
+            <div class="form-checkbox">
+              <label for="upperCaseChar" class="babel">
+                <input type="checkbox" name="upperCaseChar" id="upperCaseChar" id="upperCaeCaseChar">
+                    Upper-Case Characters
+              </label>
+             
+            <div class="form-checkbox">
+                <label for="numericalChar" class="babel">
+                  <input type="checkbox" name="nbLowerCaseChar" id="numericalChar" id="numericalCaseChar">
+                      Lower-Case Characters
+                </label>  
+                
+                <div class="form-checkbox">
+                  <label for="spsecialChar" class="babel">
+                    <input type="checkbox" name="specialChar" id="specialChar" id="specialCaseChar">
+                        Special-Case Characters
+                  </label>
+
+
+            </div>
+        </div>
         <div class="Password-input"> 
           <input type="text" class="input-passeword" id="Passeword" placeholder="Your Secure Passeword" >
         </div>
@@ -26,7 +57,7 @@
           <button class="btn left" id="generatepw">
             Genarate Password
           </button>
-          <button class="btn right">
+          <button class="btn right copyPasswords">
             Copy to clipboard
           </button>
 

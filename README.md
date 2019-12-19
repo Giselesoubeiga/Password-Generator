@@ -1,9 +1,14 @@
-# Password-Generator
+# Password-Genenerator
+This is a Password Generartor buil with html css and JavaScript
 
+<h1>Description</h1>
+This project is a random password generator. To execute, click the "Generate Password" button and enter the conditions of your password:
 
-how do I randomly grab a character and add it to a string 
-I need existing arrays of all possible characters
+1) How many characters do you want in your password? (must be between 8-128 characters)
 
+2) Select your character type (special, numeric, uppercase, lowercase) by selectiong ok in the prompt. (you must select at least one type)
 
-you need an Arr 
+3) Click "Generate Password and the password is generated in the box provided
+
+4) Click the copy to clipboard button to copy your password.
 
