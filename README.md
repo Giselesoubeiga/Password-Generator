@@ -1,5 +1,5 @@
 # Password-Genenerator
-This is a Password Generartor buil with html css and JavaScript
+This is a Password Generartor build with html css and JavaScript
 
 <h1>Description</h1>
 This project is a random password generator. To execute, click the "Generate Password" button and enter the conditions of your password:
