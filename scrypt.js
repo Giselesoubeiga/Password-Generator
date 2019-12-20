@@ -6,7 +6,7 @@ var nbLowerCaseChar = document.getElementById("nbLowerCaseChar")
 var upperCaseChar = document.getElementById("upperCaseChar")
 var numericalChar = document.getElementById("numericalChar")
 var specialChar = document.getElementById("specialChar")
-var inputPasseword = document.getElementById("inputPasseword")
+var inputPasseword = document.getElementById("Passeword")
 
 //buttons
 var btnGeneratepw = document.getElementById("generatepw")
@@ -19,9 +19,9 @@ var uppercaseCharactersString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var specialCharString = "!@#$%^&*()_+~`|}{[]\:;?><,./-="
 
 //Click button to copy
-btnCopyPassword.addEventListener("click", function() {
-    inputPasseword.selector()
-    documebt.execCommand("copy")
+btnCopyPassword.addEventListener("click", function () {
+    inputPasseword.select()
+    document.execCommand("copy")
 
     alert("copied your new password");
 })
@@ -30,35 +30,36 @@ btnCopyPassword.addEventListener("click", function() {
 btnGeneratepw.addEventListener("click",function () {
 
     var password = ""
-    var len = passeworLength.value
+    var len = passewordLength.value
 
     if (isNaN(len)) {    
         alert("This is not a number")
     } else {
         if(len < 8) {
             alert("the number is too low")
-            return
          }else if (len > 128){
              alert("This number is too hight")
-             return
+            
          }
-         
+
     }
+    inputPasseword = password_generator(len)
+})
+
     console.log(nbLowerCaseChar.checked)
        inputPasseword.value = password_generator(
-           len,
+        parseInt(len),
            upperCaseChar.checked,
-           //nubLowerCaseChar.checked,
+           //nbLowerCaseChar.checked,
            numericalChar.checked,
            specialChar.checked
             )
-       })
+       
 
 
-       function password_generator(len, ckUppercaseCharactersStr, ckNumeric,ckPunctuation) {
+       function password_generator(len) {
         let length = (len) ? (len) : (10);
-        let string = "abcdefghijklmnopqrstuvwxyz"; //to upper 
-        let uppercaseCharactersString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let string = "abcdefghijklmnopqrstuvwxyz"; 
         let numeric = '0123456789';
         let punctuation = '!@#$%^&*()_+~`|}{[]\:;?><,./-=';
         let password = "";
@@ -71,25 +72,13 @@ btnGeneratepw.addEventListener("click",function () {
    
              entity2 = Math.ceil(numeric.length * Math.random() * Math.random());
              entity3 = Math.ceil(punctuation.length * Math.random() * Math.random());
-   
-             entity4 = Math.ceil(uppercaseCharactersString.length * Math.random() * Math.random());
-   
              hold = string.charAt(entity1);
+
+             hold =(password.length % 2 ==0) ? (hold. toUpperCase()) : (hold);
     
-             
              character += hold;
-             if (ckNumeric){
-                   character += numeric.charAt(entity2);
-             }
-            
-             if (ckPunctuation) {
-                  character += punctuation.charAt(entity3);
-             }
-             if (ckUppercaseCharactersStr){
-                  character += uppercaseCharactersString.charAt(entity4);
-   
-             }
-              
+             character += numeric.charAt(entity2);
+             character += punctuation.charAt(entity3);
              password = character;
         }
    
@@ -97,6 +86,8 @@ btnGeneratepw.addEventListener("click",function () {
         password = password.split('').sort(function () {
              return 0.5 - Math.random()
         }).join('');
+   
         return password.substr(0, len);
    }
 
+            
