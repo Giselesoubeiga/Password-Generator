@@ -37,14 +37,16 @@ btnGeneratepw.addEventListener("click",function () {
     } else {
         if(len < 8) {
             alert("the number is too low")
+            return
          }else if (len > 128){
              alert("This number is too hight")
+             return
             
          }
 
     }
-    inputPasseword = password_generator(len)
-})
+//     inputPasseword = password_generator(len)
+// })
 
     console.log(nbLowerCaseChar.checked)
        inputPasseword.value = password_generator(
@@ -54,6 +56,7 @@ btnGeneratepw.addEventListener("click",function () {
            numericalChar.checked,
            specialChar.checked
             )
+       })
        
 
 
