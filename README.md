@@ -12,3 +12,6 @@ This project is a random password generator. To execute, click the "Generate Pas
 
 4) Click the copy to clipboard button to copy your password.
 
+
+
+git@github.com:Giselesoubeiga/Password-Generator.git
