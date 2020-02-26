@@ -1,6 +1,10 @@
 # Password-Genenerator
 This is a Password Generartor build with html css and JavaScript
 
+Please visit the deployed project at: https://giselesoubeiga.github.io/Password-Generator 
+
+
+
 <h1>Description</h1>
 This project is a random password generator. To execute, click the "Generate Password" button and enter the conditions of your password:
 
@@ -12,6 +16,8 @@ This project is a random password generator. To execute, click the "Generate Pas
 
 4) Click the copy to clipboard button to copy your password.
 
+![alt text](Screeshoot-Password-Generator.PNG)
 
 
-git@github.com:Giselesoubeiga/Password-Generator.git
+
+
