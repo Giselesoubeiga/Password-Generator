@@ -20,8 +20,3 @@ This project is a random password generator. To execute, click the "Generate Pas
 
 
 
-<<<<<<< HEAD
-
-=======
-Please visit the deployed project at: https://giselesoubeiga.github.io/Password-Generator
->>>>>>> 0b22e16e461b8e7313da714ee5225ae6ab3c4c50
